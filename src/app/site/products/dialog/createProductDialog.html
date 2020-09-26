@@ -1,0 +1,19 @@
+<form #form="ngForm">
+  <mat-form-field>
+    <input type="text" matInput name="nome"
+           [(ngModel)]="newProductModel.nome" placeholder="Nome" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input type="text" matInput name="valor"
+           [(ngModel)]="newProductModel.valor" placeholder="Valor" required>
+  </mat-form-field>
+
+
+  <div mat-dialog-actions>
+    <button mat-button
+            [disabled]="!form.valid"
+            type="button"
+            (click)="submit(form)"
+    >Enviar</button>
+  </div>
+</form>
